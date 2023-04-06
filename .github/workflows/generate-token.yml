@@ -7,10 +7,16 @@ on:
         required: true
       PRIVATE_KEY:
         required: true
+    outputs:
+      token:
+        description: "The first output string"
+        value: ${{ jobs.generate-token.outputs.token }}
 
 jobs:
   generate-token:
     runs-on: ubuntu-latest
+    outputs:
+      token: ${{ steps.generate.outputs.token }}
     steps:
       - name: Generate GitHub Apps token
         id: generate
