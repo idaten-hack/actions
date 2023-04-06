@@ -24,4 +24,5 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: |
+          echo ${{ github.action_path }}
           ${{ github.action_path }}/generate-token/script.sh
