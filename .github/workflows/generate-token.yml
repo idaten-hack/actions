@@ -25,4 +25,3 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         run: |
           ls -la
-          ./generate-token/script.sh
